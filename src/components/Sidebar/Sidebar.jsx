@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className='top'>
-            <img className='menu' src={assets.menu} alt="" />
+            <div><img className='menu' src={assets.menu} alt="" /></div>
             <div className='new-chat'>
               <img src={assets.plus} alt="" />
               <p>New Chat</p>
