@@ -29,15 +29,15 @@ const Sidebar = () => {
       <div className="bottom">
         <div className="bottom-item recent-entry">
           <img src={assets.question} alt="" />
-          <p>Help</p>
+          {extended ? <p>Help</p> : null}
         </div>
         <div className="bottom-item recent-entry">
           <img src={assets.history} alt="" />
-          <p>Activity</p>
+          {extended ? <p>Activity</p> : null}
         </div>
         <div className="bottom-item recent-entry">
           <img src={assets.gear} alt="" />
-          <p>Settings</p>
+          {extended ? <p>Settings</p> : null}
         </div>
       </div>
     </div>
