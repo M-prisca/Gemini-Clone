@@ -35,20 +35,20 @@ const Main = () => {
           </div>
         </div>
 
-        {/* <div className="main-bottom">
-          <input type="text" placeholder="Enter a prompt here" />
-          <div>
-            <img src={assets.gallery} alt="" />
-            <img src={assets.mic} alt="" />
-            <img src={assets.sent} alt="" />
+        <div className="main-bottom">
+          <div className="search-box">
+            <input type="text" placeholder="Enter a prompt here" />
+            <div>
+              <img src={assets.gallery} alt="" />
+              <img src={assets.mic} alt="" />
+              <img src={assets.sent} alt="" />
+            </div>
           </div>
-          <div>
-            <p className="bottom-info">
-              Gemini may display inaccurate info, including about people, so
-              double-check its responses. Your privacy and Gemini Apps
-            </p>
-          </div>
-        </div> */}
+          <p className="bottom-info">
+            Gemini may display inaccurate info, including about people, so
+            double-check its responses. Your privacy and Gemini Apps
+          </p>
+        </div>
       </div>
     </div>
   );
