@@ -1,11 +1,13 @@
-const {
+import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
-} = require("@google/generative-ai");
+} from "@google/generative-ai";
+import { apiKey } from "./config";
+import runChat from "./config/gemini";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
-const MODEL = "gemini-1.0-pro";
-const API_KEY = "AIzaSyCgbdDzk5iBJDMk-dcNvyM7k9wsAihZctc";
+const MODEL_NAME = "gemini-pro";
 
 async function runChat(prompt) {
   const genAI = new GoogleGenerativeAI(API_KEY);
