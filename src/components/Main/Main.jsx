@@ -12,9 +12,10 @@ const Main = () => {
       <div className="main-container">
         <div className="greet">
           <p>
-            <span>Hello, Prisca</span>
-            <p>How Can I help you today?</p>
+            <span>Hello, Prisca</span>{" "}
           </p>
+
+          <p>How Can I help you today?</p>
         </div>
         <div className="cards">
           <div className="card">
