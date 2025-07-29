@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Main.css";
 import { assets } from "../../assets/assets";
+import { Context } from "../../context/context";
 
 const Main = () => {
+  const {
+    onSent,
+    recentPrompts,
+    showResult,
+    loading,
+    resultData,
+    setInput,
+    input,
+  } = useContext(Context);
   return (
     <div className="main">
       <div className="nav">
@@ -38,11 +48,16 @@ const Main = () => {
 
         <div className="main-bottom">
           <div className="search-box">
-            <input type="text" placeholder="Enter a prompt here" />
+            <input
+              onChange={(e) => setInput(e.target.value)}
+              value={input}
+              type="text"
+              placeholder="Enter a prompt here"
+            />
             <div>
               <img src={assets.gallery} alt="" />
               <img src={assets.mic} alt="" />
-              <img src={assets.sent} alt="" />
+              <img onClick={() => onSent()} src={assets.sent} alt="" />
             </div>
           </div>
           <p className="bottom-info">
