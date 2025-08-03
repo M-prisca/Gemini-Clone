@@ -6,7 +6,7 @@ import {
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
-const MODEL_NAME = "gemini-1.0-pro";
+const MODEL_NAME = "gemini-1.5-pro";
 
 async function runChat(prompt) {
   const genAI = new GoogleGenerativeAI(API_KEY);
