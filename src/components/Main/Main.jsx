@@ -20,31 +20,37 @@ const Main = () => {
         <img src={assets.user} alt="" />
       </div>
       <div className="main-container">
-        <div className="greet">
-          <p>
-            <span>Hello, Prisca</span>{" "}
-          </p>
+        {!showResult ? (
+          <>
+            <div className="greet">
+              <p>
+                <span>Hello, Prisca</span>{" "}
+              </p>
 
-          <p>How Can I help you today?</p>
-        </div>
-        <div className="cards">
-          <div className="card">
-            <p>Suggest beautiful places to see on an upcoming road trip</p>
-            <img src={assets.compass} alt="" />
-          </div>
-          <div className="card">
-            <p>Brifely summarize this concept: urban planning</p>
-            <img src={assets.bulb} alt="" />
-          </div>
-          <div className="card">
-            <p>Brainstorm team bonding activities for our work retreat</p>
-            <img src={assets.message} alt="" />
-          </div>
-          <div className="card">
-            <p>Improve the readability of the following code</p>
-            <img src={assets.code} alt="" />
-          </div>
-        </div>
+              <p>How Can I help you today?</p>
+            </div>
+            <div className="cards">
+              <div className="card">
+                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <img src={assets.compass} alt="" />
+              </div>
+              <div className="card">
+                <p>Brifely summarize this concept: urban planning</p>
+                <img src={assets.bulb} alt="" />
+              </div>
+              <div className="card">
+                <p>Brainstorm team bonding activities for our work retreat</p>
+                <img src={assets.message} alt="" />
+              </div>
+              <div className="card">
+                <p>Improve the readability of the following code</p>
+                <img src={assets.code} alt="" />
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="result"></div>
+        )}
 
         <div className="main-bottom">
           <div className="search-box">
