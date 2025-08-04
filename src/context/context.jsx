@@ -16,10 +16,17 @@ const ContextProvider = (props) => {
     setLoading(true);
     setShowResult(true);
     setRecentPrompts(input);
-    const response = await runChat(input);
-    setResultData(response);
-    setLoading(false);
-    setInput("");
+
+    try {
+      const response = await runChat(input);
+      setResultData(response);
+    } catch (error) {
+      console.error("runChat failed:", error);
+      setResultData("Oops! Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+      setInput("");
+    }
   };
 
   const contextValue = {
