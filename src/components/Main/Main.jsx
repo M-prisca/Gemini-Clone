@@ -80,7 +80,9 @@ const Main = () => {
             <div>
               <img src={assets.gallery} alt="" />
               <img src={assets.mic} alt="" />
-              <img onClick={() => onSent()} src={assets.sent} alt="" />
+              {input ? (
+                <img onClick={() => onSent()} src={assets.sent} alt="" />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">
