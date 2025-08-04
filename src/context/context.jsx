@@ -11,6 +11,8 @@ const ContextProvider = (props) => {
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
 
+  const delayParagraph = (index, nextWord) => {};
+
   const onSent = async (prompt) => {
     setResultData("");
     setLoading(true);
@@ -19,7 +21,16 @@ const ContextProvider = (props) => {
 
     try {
       const response = await runChat(input);
-      setResultData(response);
+      let responseArray = response.split("**");
+      let newResponse;
+      for (let i = 0; i < responseArray.length; i++) {
+        if (i === 0 || i % 2 !== 1) {
+          newResponse += responseArray[i];
+        } else {
+          newResponse += "<b>" + responseArray[i] + "</b>";
+        }
+      }
+      setResultData(newResponse);
     } catch (error) {
       console.error("runChat failed:", error);
       setResultData("Oops! Something went wrong. Please try again later.");
