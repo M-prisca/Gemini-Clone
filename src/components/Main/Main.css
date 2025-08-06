@@ -1,11 +1,11 @@
   .app-layout{
     display: flex;
+    
   }
   
   .main{
     flex: 1;
-    min-height: 100vh;
-    padding-bottom: 15vh;
+    min-height: 100%;
     position: relative;
   }
   .main .nav{
@@ -13,8 +13,8 @@
     align-items: center;
     justify-content: space-between;
     font-size: 22px;
-    padding: 2px;
-    margin: 20px;
+    /* padding: 10px; */
+    margin: 0 20px;
     color: #585858 ;
   }
   .main .nav img{
@@ -31,11 +31,15 @@
   }
  
   .main .greet{
-    margin: 50px 0px;
+    padding: 0;
     font-size: 56px;
     color: #c4c7c5;
     font-weight: 500;
-    padding: 20px;
+    line-height:normal;
+
+  }
+  .main .greet p{
+    margin: 10px;
   }
   .main .greet span{
     background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
@@ -49,7 +53,7 @@
     padding: 20px;
   }
   .main .card{
-    height: 200px;
+    height: 150px;
     padding: 15px;
     background-color: #f0f4f9;
     border-radius: 10px;
@@ -108,7 +112,7 @@
   }
   .main .bottom-info{
     font-size: 13px;
-    margin: 15px auto;
+    margin: 15px ;
     text-align: center;
     font-weight: 300;
 

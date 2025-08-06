@@ -58,9 +58,12 @@
 .sidebar .bottom{
     display: flex;
     flex-direction: column;
+    margin: 0px 0px;
 }
 .sidebar .bottom-item{
     padding-right: 10px ;
+    margin: bottom 0;
+    padding-bottom: 0px;
     cursor: pointer;
 }
 .sidebar .bottom-item p{
@@ -70,6 +73,23 @@
 @media (max-width: 600px) {
     .sidebar{
         display: none;
+        
     }
+
+    @media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        width: 60px;
+    }
+
+    .main {
+        margin-left: 60px; /* to make space for fixed sidebar */
+    }
+}
+
     
 }
