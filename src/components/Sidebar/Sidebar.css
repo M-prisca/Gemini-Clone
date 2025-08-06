@@ -32,7 +32,7 @@
     animation: fadeIn 1s ease-in-out;
 }
 .sidebar .recent-title{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 
 }
@@ -45,6 +45,9 @@
     border-radius: 50px;
     color: #282828;
     cursor: pointer;
+}
+.sidebar .recent-entry p{
+    margin-top: 0;
 }
 
 .sidebar .recent-entry:hover{
@@ -59,6 +62,9 @@
 .sidebar .bottom-item{
     padding-right: 10px ;
     cursor: pointer;
+}
+.sidebar .bottom-item p{
+    margin-top: 0;
 }
 
 @media (max-width: 600px) {
